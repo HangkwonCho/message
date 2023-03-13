@@ -15,7 +15,19 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MessageItemController {
 
+/*    @Autowired
+    private ApplicationContext applicationContext;*/
+
     private final ItemRepository itemRepository;
+
+/*    @PostConstruct
+    public void bean() {
+        String[] beans = applicationContext.getBeanDefinitionNames();
+        for (String beanDefinitionName : beans) {
+            Object bean = applicationContext.getBean(beanDefinitionName);
+            System.out.println("name = " + beanDefinitionName + " object = " + bean);
+        }
+    }*/
 
     @GetMapping
     public String items(Model model) {
